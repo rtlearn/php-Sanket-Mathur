@@ -1,0 +1,62 @@
+:root {
+    --font: "Open Sans", sans-serif;
+    --lightgreen: rgb(15, 160, 50);
+    --darkgreen: rgb(10, 135, 40);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* form align */
+form {
+    text-align: center;
+    margin: 5rem;
+}
+form button {
+    margin-top: 3rem;
+}
+
+/* text style */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: var(--font);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.5rem;
+}
+label, p {
+    font-size: 1.5rem;
+    font-family: var(--font);
+    text-align: center;
+    padding: 0.5rem 1rem;
+}
+input, button {
+    font-size: 1.2rem;
+    font-family: var(--font);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    max-width: 80vw;
+}
+
+/* button style */
+button {
+    background-color: var(--darkgreen);
+    border-color: var(--darkgreen);
+    outline: none;
+    color: white
+}
+button:hover {
+    background-color: var(--lightgreen);
+}
