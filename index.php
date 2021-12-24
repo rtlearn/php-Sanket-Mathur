@@ -1,6 +1,11 @@
 <?php
 
-error_reporting(0);
+ini_set('error_reporting', 0);
+
+// checking if servername is set
+if (!isset($_SERVER['SERVER_NAME'])) {
+    die('Server error.');
+}
 
 ?>
 
@@ -20,7 +25,7 @@ error_reporting(0);
         <!-- Form for user email submission -->
         <form action="" method="post">
             <label>Email Address: </label>
-            <input type="email" name="email" size="50">
+            <input type="email" name="email" size="50" required>
             <br>
             <button type="submit" name="submit">Send Verificaton Code</button>
         </form>
@@ -37,7 +42,7 @@ if (!$con) {
 mysqli_select_db($con, 'rtcamp');
 
 // Handling on submit event
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit']) && isset($_POST['email'])) {
     $email = $_POST['email'];
     // sanitize email
     $email = mysqli_real_escape_string($con, $email);

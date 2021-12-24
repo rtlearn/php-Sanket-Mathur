@@ -1,5 +1,10 @@
 <?php
 
+// checking if servername is set
+if (!isset($_SERVER['SERVER_NAME'])) {
+    die('Server error.');
+}
+
 // connecting to the server
 $con = mysqli_connect($_SERVER['SERVER_NAME'], 'root', '');
 if (!$con) {
