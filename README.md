@@ -1,7 +1,24 @@
 # php-starter
 
-If you are reading this in your assignment repo, please read [assignment submission guidelines](https://learn.rtcamp.com/campus/php-assignments/guidelines/) before proceeding.
+## Problem Title:
+### Email a random XKCD challenge
 
-Then make sure to replace content of the file with information relevant to your assignment. 
+## Problem Statement:
+Please create a simple PHP application that accepts a visitor’s email address and emails them random XKCD comics every five minutes.
 
-Writing your own README.md file is required anyway as per [assignment submission guidelines](https://learn.rtcamp.com/campus/php-assignments/guidelines/).
+- Your app should include email verification to avoid people using others’ email addresses.
+- XKCD image should go as an email attachment as well as inline image content.
+- You can visit https://c.xkcd.com/random/comic/ programmatically to return a random comic URL and then use JSON API for details https://xkcd.com/json.html
+- Please make sure your emails contain an unsubscribe link so a user can stop getting emails.
+
+Since this is a simple project it must be done in core PHP including API calls, recurring emails, including attachments should happen in core PHP. Please do not use any libraries.
+
+## TODO
+- [x] Input sanitization
+- [x] Email verification
+- [x] Storing subscription
+- [ ] Random selection of comics
+- [ ] Email scheduling
+- [ ] Unsubscribe token link
+- [x] Updating README
+- [ ] Live demo
