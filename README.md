@@ -17,7 +17,8 @@ Since this is a simple project it must be done in core PHP including API calls, 
 - [x] Input sanitization
 - [x] Email verification
 - [x] Storing subscription
-- [ ] Random selection of comics
+- [x] Random selection of comics
+- [x] Sending emails
 - [ ] Email scheduling
 - [ ] Unsubscribe token link
 - [x] Updating README

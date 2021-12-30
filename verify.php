@@ -1,7 +1,5 @@
 <?php
 
-ini_set('error_reporting', 0);
-
 // checking if servername is set
 if (!isset($_SERVER['SERVER_NAME'])) {
     die('Server error.');

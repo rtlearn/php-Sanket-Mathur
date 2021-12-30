@@ -1,7 +1,5 @@
 <?php
 
-ini_set('error_reporting', 0);
-
 // checking if servername is set
 if (!isset($_SERVER['SERVER_NAME'])) {
     die('Server error.');
@@ -69,7 +67,6 @@ if (isset($_POST['submit']) && isset($_POST['email'])) {
         echo '<script>alert("Verification code sent");</script>';
     } else {
         echo '<script>alert("Could not send the verification code");</script>';
-        echo $message;
     }
 }
 
