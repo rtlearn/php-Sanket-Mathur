@@ -1,7 +1,7 @@
 <?php
 
-// checking if servername is set
-if (!isset($_SERVER['SERVER_NAME'])) {
+// checking if servername and host are set
+if (!isset($_SERVER['SERVER_NAME']) || !isset($_SERVER['HTTP_HOST'])) {
     die('Server error.');
 }
 
@@ -47,7 +47,7 @@ if (isset($_POST['submit']) && isset($_POST['email'])) {
 
     // generating a 32-bit verification code
     $verification_code = md5(rand(1000, 9999));
-    $verification_link = 'http://localhost/rtcamp/verify.php?verification_code=' . $verification_code;
+    $verification_link = 'http://' . $_SERVER['HTTP_HOST'] . '/verify.php?verification_code=' . $verification_code;
 
     // Storing user email and verification code in the temporary table
     $query = "INSERT INTO temp_users (email, verification_code) VALUES ('$email', '$verification_code')";

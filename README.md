@@ -20,6 +20,6 @@ Since this is a simple project it must be done in core PHP including API calls, 
 - [x] Random selection of comics
 - [x] Sending emails
 - [ ] Email scheduling
-- [ ] Unsubscribe token link
+- [x] Unsubscribe token link
 - [x] Updating README
 - [ ] Live demo

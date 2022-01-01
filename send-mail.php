@@ -1,7 +1,7 @@
 <?php
 
-// checking if servername is set
-if (!isset($_SERVER['SERVER_NAME'])) {
+// checking if servername and host are set
+if (!isset($_SERVER['SERVER_NAME']) || !isset($_SERVER['HTTP_HOST'])) {
     die('Server error.');
 }
 
@@ -59,7 +59,7 @@ foreach ($subscribers as $user) {
     // adding unsubscribe_token to the message
     $message = '<h3>' . $title . '</h3><br>';
     $message .= '<img src="' . $img . '" alt="' . $title . '"><br><br>';
-    $message .= 'Click here to <a href="http://localhost/rtcamp/unsubscribe.php?unsubscribe_token=' . $user['unsubscribe_token'] . '">unsubscribe</a>.';
+    $message .= 'Click here to <a href="http://' . $_SERVER['HTTP_HOST'] . '/unsubscribe.php?unsubscribe_token=' . $user['unsubscribe_token'] . '">unsubscribe</a>.';
 
     mail($user['email'], $subject, $message, $header);
 }
